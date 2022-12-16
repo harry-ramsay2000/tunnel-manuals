@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Tunnel Manuals',
-  tagline: 'Tunnels are cool',
+  tagline: 'City University Wind Tunnel Operating Instructions',
   url: 'https://tunnels.harryramsay.co.uk/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -79,9 +79,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'City Tunnel Manuals',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'City Logo',
           src: 'img/logo.svg',
         },
         items: [
