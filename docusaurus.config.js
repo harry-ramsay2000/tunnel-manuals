@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Tunnel Manuals',
   tagline: 'City University Wind Tunnel Operating Instructions',
-  url: 'https://tunnels.harryramsay.co.uk/',
+  url: 'http://tunnels.harryramsay.co.uk/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
