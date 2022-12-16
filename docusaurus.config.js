@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Tunnel Manuals',
   tagline: 'Tunnels are cool',
-  url: 'tunnels.harryramsay.co.uk',
+  url: 'https://tunnels.harryramsay.co.uk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -34,6 +34,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
