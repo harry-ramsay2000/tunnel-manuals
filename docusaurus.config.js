@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Tunnel Manuals',
   tagline: 'Tunnels are cool',
-  url: 'https://tunnels.harryramsay.co.uk',
+  url: 'https://harry-ramsay2000.github.io/tunnel_manuals',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
