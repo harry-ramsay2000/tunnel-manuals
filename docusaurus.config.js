@@ -38,19 +38,40 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/harry-ramsay2000/tunnel-manuals/tree/master/docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/harry-ramsay2000/tunnel-manuals/tree/master/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-gaster',
+        path: 'docs-gaster',
+        routeBasePath: 'docs-gaster',
+        sidebarPath: require.resolve('./sidebars.js'),
+      }, 
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-t5',
+        path: 'docs-t5',
+        routeBasePath: 'docs-t5',
+        sidebarPath: require.resolve('./sidebars.js'),
+      }, 
     ],
   ],
 
@@ -64,18 +85,31 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Tutorials',
+          // },
           {
-            type: 'doc',
-            docId: 'intro',
+            to: '/docs/Intro',    // ./docs/Intro.md
+            label: 'Low Speed Tunnels',
             position: 'left',
-            label: 'Tutorial',
+            activeBaseRegex: `/docs/`,
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            to: '/docs-gaster/Intro',    // ./docs/Intro.md
+            label: 'Gaster Tunnel',
+            position: 'left',
+            activeBaseRegex: `/docs-gaster/`,
           },
+          {
+            to: '/docs-t5/Intro',    // ./docs/Intro.md
+            label: 'Transonic Tunnel',
+            position: 'left',
+            activeBaseRegex: `/docs-t5/`,
+          },
+          {to: '/blog', label: 'Lab Blog', position: 'left'},
         ],
       },
       footer: {
@@ -93,18 +127,18 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+              // {
+              //   label: 'Stack Overflow',
+              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              // },
+              // {
+              //   label: 'Discord',
+              //   href: 'https://discordapp.com/invite/docusaurus',
+              // },
+              // {
+              //   label: 'Twitter',
+              //   href: 'https://twitter.com/docusaurus',
+              // },
             ],
           },
           {
@@ -114,14 +148,10 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Harry Ramsay | City, University of London`,
       },
       prism: {
         theme: lightCodeTheme,
