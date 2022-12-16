@@ -93,7 +93,7 @@ const config = {
           // },
           {
             to: '/docs/Intro',    // ./docs/Intro.md
-            label: 'Low Speed Tunnels',
+            label: 'HP Lab Tunnels',
             position: 'left',
             activeBaseRegex: `/docs/`,
           },
@@ -119,8 +119,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'HP Lab Tunnels',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Gaster Tunnel',
+                to: '/docs-gaster/intro',
+              },
+              {
+                label: 'Transonic Tunnel',
+                to: '/docs-t5/intro',
               },
             ],
           },
