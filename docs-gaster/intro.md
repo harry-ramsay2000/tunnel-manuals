@@ -1,8 +1,7 @@
 ---
 sidebar_position: 1
-id: gaster-intro
+id: intro
 title: Introduction to the Gaster Tunnnel
-slug: /
 ---
 
 # Tutorial Intro
