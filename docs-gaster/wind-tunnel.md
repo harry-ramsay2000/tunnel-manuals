@@ -17,7 +17,7 @@ The traverse controller houses the necessary hardware to drive the traverse, wit
 The *NI PXI 1033* chassis also houses the card required for data acquisition. The hardware and connection layout can be seen in the figure below. Control of the wind tunnel fan is communicated through a serial USB interface to the wind tunnel controller.
 
 <figure>
-![Hardware and Connection Layout]{https://picsum.photos/800/300}
+![Hardware and Connection Layout](https://picsum.photos/800/300)
 <figurecaption>Gaster Tunnel hardware and instrumentation connection layout</figurecaption>
 </figure>
 
