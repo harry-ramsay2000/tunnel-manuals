@@ -25,8 +25,38 @@ The *NI PXI 1033* chassis also houses the card required for data acquisition. Th
 For the control system to operate all functions correctly, it is important to ensure that any and all hardware is connected through the correct channels. These channels are highlighted below.
 
 ```mermaid
-    flowchart TD
-        id1(USB/RS 232)
-        id2(RS 232 to 422)
-        id1-id2
+    flowchart LR
+        subgraph wt[Wind Tunnel]
+        A[USB/RS 232] --> B[RS 232 to 422]
+        B --> C[RS 323 Port] --> D[WT Controller] --> E[WT Motor]
+        end
+
+        PC[fa:fa-computer PC] -->|USB| A
+
+        subgraph 1033[NI PXI-1033]
+        PXI-7350
+        PXI-6143
+        PXI-6723
+        PXI-6624
+        end
+
+        1033 <--> PC
+
+        subgraph Data Acquisition
+        BNC-2111 <--> PXI-6624
+        BNC-2115 <--> PXI-6723
+        BNC-2120 <--> PXI-6143
+        end
+
+        subgraph Traverse Control
+        tc[NI UMI-7774]
+        tb[Traverse Box]
+        tm[Traverse XYZ Motors]
+        end
+
+        PXI-7350 --> tc
+        tc --> tb
+        tb --> tm
+
+        PC -->|Power| B
 ```
