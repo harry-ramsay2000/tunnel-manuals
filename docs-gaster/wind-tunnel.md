@@ -1,9 +1,10 @@
 ---
 id: gaster-overview
 title: Overview of the Tunnel
+sidebar_position: 2
 ---
 
-# Wind Tunnel Layout
+## Wind Tunnel Layout
 
 Shown below is the control and instrumentation for the Gaster tunnel. Visible is the three-axis hot-wire traverse, the data acquisition hardware, and the additional instrumentation and measurement hardware such as filters and oscilloscopes.
 
@@ -21,8 +22,8 @@ The *NI PXI 1033* chassis also houses the card required for data acquisition. Th
 <!-- <figurecaption>Gaster Tunnel hardware and instrumentation connection layout</figurecaption> -->
 <!-- </figure> -->
 
-# Connections
-For the control system to operate all functions correctly, it is important to ensure that any and all hardware is connected through the correct channels. These channels are highlighted below.
+## Connections
+For the control system to operate all functions correctly, it is important to ensure that any and all hardware is connected through the correct channels. A top-level connection diagram can be seen below.
 
 ```mermaid
     flowchart LR
@@ -59,4 +60,43 @@ For the control system to operate all functions correctly, it is important to en
         tb --> tm
 
         PC -->|Power| B
+
+        click BNC-2111 href "#bnc-2111"
+        click BNC-2115 href "#bnc-2115"
+        click BNC-2120 href "#bnc-2120"
 ```
+
+Within the data acquisition subgroup, each card also requires that components be connected to the correct channels. These connections are described below.
+
+### BNC-2120
+
+|Channel|Sensor|Description|
+| ----- | ---- | --------- |
+| AI0   | HW 1 Raw | Signal from HW 1|
+| AI1   | HW 2 Raw | Signal from HW 2|
+| AI3   | HW 2 Filtered | Filtered Fluctuation from HW 2|
+| AI6   | HW 1 Filtered | Filtered Fluctuation from HW 1|
+| AI2   | Surface Microphone| Microphone 1|
+| AI4   | Plenum Microphone | Microphone 2|
+| AI5   | Exciter Signal | |
+| AI7   | Laser Displacement Signal |  |
+
+### BNC-2111
+
+|Channel|Sensor|Description|
+|-|-|-|
+|AI0|RTD Top|Temperature|
+|AI2|RTD Bottom|Temperature|
+|AI1|Thermistor|Temperature|
+|AI3|Barometric Pressure|Pressure|
+|AI4|Dynamic Pressure|Pressure|
+|AI5|Flow Meter| |
+|AI6|Scani Valve| |
+|AI7|Scani Pulse| |
+|AI8|Scani Pressure Transducer| |
+
+### BNC-2115
+
+|Channel|Sensor|Description|
+|-------|------|-----------|
+|AO31   |Exciter Signal|   |
